@@ -1,0 +1,32 @@
+.container {
+    width: 1110px;
+    height: 629px;
+    background-color: #EEF9BF;
+}
+
+.titulo {
+    width: 540px;
+    height: 63px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+    color: #75B79E;
+}
+
+.cartas {
+    background-color: blueviolet;
+}
+
+.carta {
+    position: absolute;
+    width: 117px;
+    height: 146px;
+    left: 424px;
+    top: 150px;
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+}
