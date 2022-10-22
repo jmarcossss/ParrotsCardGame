@@ -31,6 +31,8 @@ body {
     height: 500px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .carta {
@@ -61,6 +63,8 @@ body {
     transform-style: preserve-3d;
 }
 
+
+
 .verso {
     transform: rotateY(180deg);
 }
@@ -71,6 +75,15 @@ body {
 
 .virar-frente {
     transform: rotateY(-180deg);
+}
+
+.barreira {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 /* .papagaio {
