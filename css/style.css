@@ -1,32 +1,46 @@
+body {
+    background-color: #EEF9BF;
+    height: 915px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
 .container {
     width: 1110px;
     height: 629px;
-    background-color: #EEF9BF;
+    background: #b4b4b4;
 }
 
 .titulo {
-    width: 540px;
-    height: 63px;
-    font-family: 'Roboto'; kkkkkk
+    width: 700px;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
     line-height: 66px;
     letter-spacing: -0.004em;
     color: #75B79E;
+    background-color: aquamarine;
+    margin-left: 230px;
 }
 
 .cartas {
     background-color: blueviolet;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
 }
 
 .carta {
-    position: absolute;
+    /* position: absolute; */
     width: 117px;
     height: 146px;
-    left: 424px;
-    top: 150px;
+    /* left: 424px;
+    top: 150px; */
     background: #A7E9AF;
     border: 1px solid #99CEA8;
     border-radius: 5px;
+    margin-top: 30px;
 }
