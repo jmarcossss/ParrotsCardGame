@@ -65,6 +65,14 @@ body {
     transform: rotateY(180deg);
 }
 
+.virar-verso {
+    transform: rotateY(0deg);
+}
+
+.virar-frente {
+    transform: rotateY(-180deg);
+}
+
 /* .papagaio {
     width: 100px;
     height: 100px;

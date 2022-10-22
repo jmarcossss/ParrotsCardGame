@@ -1,6 +1,7 @@
 let num_cartas = 0;
 let bool = 1;
 let i = 0;
+let qtd_de_jogadas = 0;
 const gifsSelecionados = [];
 const armazena_gifs = [
     'bobrossparrot.gif',
@@ -38,5 +39,21 @@ function inserirCartas() {
         </div>`
     }
 };
+
+//Função que vai virar o lado da carta sempre que a div "carta" for selecionada, por isso que ela recebe um botão
+//Se essa função for chamada, obviamente é porque o usuário deu um click, logo é necessário incrementar a qtd_de_jogadas
+function lado_oposto(button) {
+    qtd_de_jogadas++;
+    button.querySelector(".verso").classList.add("virar-verso");
+    button.querySelector(".frente").classList.add("virar-frente");
+
+}
+
+entrarNoJogo();
+inserirCartas();
+
+alert("OK!");
+
+
 
 
