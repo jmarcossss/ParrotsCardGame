@@ -34,11 +34,8 @@ body {
 }
 
 .carta {
-    /* position: absolute; */
     width: 117px;
     height: 146px;
-    /* left: 424px;
-    top: 150px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,10 +43,29 @@ body {
     border: 1px solid #99CEA8;
     border-radius: 5px;
     margin-top: 30px;
-    /* background-image: url("/Arquivos/back.png"); */
 }
 
-.papagaio {
+.carta img {
     width: 100px;
     height: 100px;
+    padding: 23px 8.5px;
+    background-color: #A7E9AF;
+    border-radius: 5px;
+
 }
+
+.foto {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+
+.verso {
+    transform: rotateY(180deg);
+}
+
+/* .papagaio {
+    width: 100px;
+    height: 100px;
+} */
