@@ -75,7 +75,7 @@ function compararPar(){
         primeira_carta.querySelector(".frente").classList.remove("virar-frente")
         segunda_carta.querySelector(".verso").classList.remove("virar-verso")
         segunda_carta.querySelector(".frente").classList.remove("virar-frente")
-        primeira_carta.setAttribute("onclick", "virarCarta(this)")
+        primeira_carta.setAttribute("onclick", "lado_oposto(this)")
         primeira_carta.classList.remove("primeira_carta")
         segunda_carta.classList.remove("segunda_carta")
     }
@@ -85,10 +85,16 @@ function compararPar(){
         segunda_carta.classList.remove("segunda_carta")
         primeira_carta.setAttribute('onclick','')
         segunda_carta.setAttribute('onclick','')
-        // mostrarNumeroJogadas()
-        // finalizarJogo()
+        sairDoJogo();
+
     }
     document.querySelector(".barreira").style.display = "none"
+}
+
+function sairDoJogo() {
+    if(paresFeitos.length === (num_cartas / 2)){
+                alert(`Parabens, você ganhou ${qtd_de_jogadas} jogadas!!!`)
+            }
 }
 
 entrarNoJogo();
