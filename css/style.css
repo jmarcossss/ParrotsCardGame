@@ -79,7 +79,7 @@ body {
 .foto {
     position: absolute;
     backface-visibility: hidden;
-    transition: all .5s;
+    transition: all .4s;
     transform-style: preserve-3d;
 }
 

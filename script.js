@@ -52,8 +52,9 @@ function random_gifs() {
 //Função que vai inserir a quantidade de cartas que o usuário selecionou
 function inserirCartas() {
     const carta_inserida = document.querySelector(".cartas");
-    random_gifs();
+    
     carta_inserida.innerHTML += `<div class="barreira"></div>`
+    random_gifs();
     for(i = 0; i < num_cartas; i++){
         carta_inserida.innerHTML += 
         `<div class="carta" onclick=lado_oposto(this)>
@@ -84,18 +85,14 @@ function lado_oposto(button) { //O button recebe o valor do this de inserirCarta
 
 function compararPar(){
     if(carts_comp_first.innerHTML !== cards_comp_second.innerHTML){ //Se as cartas comparadas forem diferentes, quer dizer que aquele par está errado
-        if(bool == 0) {
-            bool = 1;
-            if(bool = 1){
-                carts_comp_first.querySelector(".verso").classList.remove("virar-verso");
-                carts_comp_first.querySelector(".frente").classList.remove("virar-frente");
-                cards_comp_second.querySelector(".verso").classList.remove("virar-verso");
-                cards_comp_second.querySelector(".frente").classList.remove("virar-frente");
-                carts_comp_first.setAttribute("onclick", "lado_oposto(this)");
-                carts_comp_first.classList.remove("carts_comp_first");
-                cards_comp_second.classList.remove("cards_comp_second");
-            }
-        }
+        carts_comp_first.querySelector(".verso").classList.remove("virar-verso");
+        carts_comp_first.querySelector(".frente").classList.remove("virar-frente");
+        cards_comp_second.querySelector(".verso").classList.remove("virar-verso");
+        cards_comp_second.querySelector(".frente").classList.remove("virar-frente");
+        carts_comp_first.setAttribute("onclick", "lado_oposto(this)");
+        carts_comp_first.classList.remove("carts_comp_first");
+        cards_comp_second.classList.remove("cards_comp_second");    
+        
     }
     else{ //Caso contrário, elas são iguais
         paresFeitos.push(".");
