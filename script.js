@@ -117,5 +117,3 @@ function sairDoJogo() {
 
 entrarNoJogo();
 inserirCartas();
-
-alert("OK!");

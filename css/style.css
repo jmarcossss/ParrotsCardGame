@@ -1,3 +1,19 @@
+@media (max-width:574px) {
+    
+    .cartas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titulo {
+        font-size: 36px;
+        width: 550px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+    }
+}
+
 body {
     background-color: #EEF9BF;
     height: 915px;
@@ -87,8 +103,3 @@ body {
     height: 100%;
     z-index: 1;
 }
-
-/* .papagaio {
-    width: 100px;
-    height: 100px;
-} */
