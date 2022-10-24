@@ -9,11 +9,16 @@ body {
 .container {
     width: 1110px;
     height: 629px;
-    background: #b4b4b4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+
 }
 
 .titulo {
-    width: 700px;
+    width: 550px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -21,14 +26,13 @@ body {
     line-height: 66px;
     letter-spacing: -0.004em;
     color: #75B79E;
-    background-color: aquamarine;
-    margin-left: 230px;
+    margin-top: -50px;
+    /* margin-left: 300px; */
 }
 
 .cartas {
-    background-color: blueviolet;
-    width: 100%;
-    height: 500px;
+    width: 900px;
+    height: 400px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -62,8 +66,6 @@ body {
     transition: all .5s;
     transform-style: preserve-3d;
 }
-
-
 
 .verso {
     transform: rotateY(180deg);
