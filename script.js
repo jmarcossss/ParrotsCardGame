@@ -4,7 +4,7 @@ let i = 0;
 let qtd_de_jogadas = 0;
 let primeira_carta, segunda_carta;
 let paresFeitos = []
-const gifsSelecionados = [];
+const armazena_gifs_func = [];
 const armazena_gifs = [ //Dobrar os gifs porque para cada par de carta, são necessários gifs iguais...
     'bobrossparrot.gif',
     'bobrossparrot.gif',
@@ -36,16 +36,28 @@ function entrarNoJogo() {
     }
 };
 
+function random_gifs() {
+    for(let i = 0; i < num_cartas; i++){
+        gifsSelecionados.push(armazena_gifs[i]) //Armeza os gifs num novo array
+        gifsSelecionados.sort(comparador) //Sortear os gifs
+    }
+}
+
+function comparador() { 
+	return Math.random() - 0.5; 
+}
+
 
 //Função que vai inserir a quantidade de cartas que o usuário selecionou
 function inserirCartas() {
     const carta_inserida = document.querySelector(".cartas");
+    random_gifs();
     carta_inserida.innerHTML += `<div class="barreira"></div>`
     for(i = 0; i < num_cartas; i++){
         carta_inserida.innerHTML += 
         `<div class="carta" onclick=lado_oposto(this)>
             <img class="foto frente" src='./Arquivos/back.png' />
-            <img class="foto verso" src='Arquivos/${armazena_gifs[i]}' />
+            <img class="foto verso" src='Arquivos/${gifsSelecionados[i]}' />
         </div>`
     }
 };
@@ -65,7 +77,7 @@ function lado_oposto(button) { //O button recebe o valor do this de inserirCarta
         document.querySelector(".barreira").style.display = "block";    
         button.classList.add("segunda_carta");
         segunda_carta = button
-        setTimeout(compararPar, 1000)
+        setTimeout(compararPar, 500)
     }
 }
 
@@ -100,9 +112,4 @@ function sairDoJogo() {
 entrarNoJogo();
 inserirCartas();
 
-
 alert("OK!");
-
-
-
-
